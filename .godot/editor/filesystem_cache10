@@ -1,0 +1,13 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1766299510
+cavalier_pixel_art.png::CompressedTexture2D::6134251998776742245::1766297540::1766299512::1::::<><><>0<>0<>1443e44f50f875e6e3a47eb2c47eeb8d<>res://.godot/imported/cavalier_pixel_art.png-17a6fbfd552eee5f6d55e9c7fdd14009.ctex::
+enemy.gd::GDScript::9110174327175584599::1766297626::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy.tscn::PackedScene::-1::1766297626::0::1::::<><><>0<>0<><>::
+level2.gd::GDScript::2961180282110995079::1766297716::0::1::::<>Node2D<><>0<>0<><>::
+level2.tscn::PackedScene::-1::1766297743::0::1::::<><><>0<>0<><>::
+main.gd::GDScript::3946182734858913272::1766297730::0::1::::<>Node2D<><>0<>0<><>::
+main.tscn::PackedScene::18548885634::1766297597::0::1::::<><><>0<>0<><>::uid://player123::::res://player.tscn
+missile.gd::GDScript::6661797998015535751::1766296765::0::1::::<>Area2D<><>0<>0<><>::
+missile.tscn::PackedScene::743863869590122::1766296823::0::1::::<><><>0<>0<><>::res://missile.gd
+player.gd::GDScript::9066600186080661644::1766297927::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::27365761919714::1766297602::0::1::::<><><>0<>0<><>::res://player.gd
