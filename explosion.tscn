@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://explosion123"]
+
+[ext_resource type="Script" path="res://explosion.gd" id="1_explosion"]
+
+[node name="Explosion" type="Area2D"]
+script = ExtResource("1_explosion")
+
+[node name="Circle" type="Polygon2D" parent="."]
+color = Color(1, 0.5, 0, 0.7)
+polygon = PackedVector2Array(50, 0, 46.2, 19.1, 35.4, 35.4, 19.1, 46.2, 0, 50, -19.1, 46.2, -35.4, 35.4, -46.2, 19.1, -50, 0, -46.2, -19.1, -35.4, -35.4, -19.1, -46.2, 0, -50, 19.1, -46.2, 35.4, -35.4, 46.2, -19.1)

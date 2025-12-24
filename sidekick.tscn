@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://sidekick123"]
+
+[ext_resource type="Script" path="res://sidekick.gd" id="1_sidekick"]
+[ext_resource type="Texture2D" uid="uid://ctnqh7y1o0xqb" path="res://cavalier_pixel_art.png" id="2_sprite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sidekick"]
+size = Vector2(50, 80)
+
+[node name="Sidekick" type="CharacterBody2D"]
+z_index = 9
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_sidekick")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -50)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_sprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sidekick")

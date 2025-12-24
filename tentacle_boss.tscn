@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://tentacle_boss"]
+
+[ext_resource type="Script" path="res://tentacle_boss.gd" id="1_boss"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
+radius = 120.0
+
+[node name="TentacleBoss" type="StaticBody2D"]
+collision_layer = 1
+collision_mask = 0
+script = ExtResource("1_boss")
+
+[node name="BodyCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_body")
+
+[node name="Body" type="Polygon2D" parent="."]
+color = Color(0.5, 0.3, 0.4, 1)
+polygon = PackedVector2Array(-80, -40, -60, -70, -20, -80, 20, -80, 60, -70, 80, -40, 80, 40, 60, 70, 20, 80, -20, 80, -60, 70, -80, 40)
+
+[node name="Eye1" type="Polygon2D" parent="."]
+position = Vector2(-30, -20)
+color = Color(1, 0.9, 0.2, 1)
+polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
+
+[node name="Pupil1" type="Polygon2D" parent="Eye1"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Eye2" type="Polygon2D" parent="."]
+position = Vector2(30, -20)
+color = Color(1, 0.9, 0.2, 1)
+polygon = PackedVector2Array(-15, -15, 15, -15, 15, 15, -15, 15)
+
+[node name="Pupil2" type="Polygon2D" parent="Eye2"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[node name="Eye3" type="Polygon2D" parent="."]
+position = Vector2(0, 20)
+color = Color(1, 0.9, 0.2, 1)
+polygon = PackedVector2Array(-20, -12, 20, -12, 20, 12, -20, 12)
+
+[node name="Pupil3" type="Polygon2D" parent="Eye3"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-10, -6, 10, -6, 10, 6, -10, 6)
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_body")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -60.0
+offset_top = -120.0
+offset_right = 60.0
+offset_bottom = -100.0
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

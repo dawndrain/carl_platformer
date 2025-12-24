@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://goblin_dozer"]
+
+[ext_resource type="Script" path="res://goblin_dozer.gd" id="1_goblin"]
+[ext_resource type="Texture2D" uid="uid://b1t6yrnq4lrlq" path="res://goblin_dozer.png" id="2_sprite"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hitbox"]
+size = Vector2(180, 180)
+
+[node name="GoblinDozer" type="CharacterBody2D"]
+script = ExtResource("1_goblin")
+health = 6
+speed = 100.0
+sprite_scale = 0.25
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_sprite")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hitbox")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_hitbox")
+
+[node name="HealthBar" type="Node2D" parent="."]
+position = Vector2(0, -110)
+
+[node name="Background" type="ColorRect" parent="HealthBar"]
+offset_left = -50.0
+offset_top = -5.0
+offset_right = 50.0
+offset_bottom = 5.0
+color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="Fill" type="ColorRect" parent="HealthBar"]
+offset_left = -50.0
+offset_top = -5.0
+offset_right = 50.0
+offset_bottom = 5.0
+pivot_offset = Vector2(0, 5)
+color = Color(0.8, 0.1, 0.1, 1)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

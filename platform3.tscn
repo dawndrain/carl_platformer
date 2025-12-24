@@ -1,0 +1,311 @@
+[gd_scene load_steps=7 format=3 uid="uid://platform3"]
+
+[ext_resource type="Script" path="res://platform_level.gd" id="1_level"]
+[ext_resource type="PackedScene" uid="uid://player123" path="res://player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://spike123" path="res://spike.tscn" id="3_spike"]
+[ext_resource type="PackedScene" uid="uid://lava123" path="res://lava.tscn" id="4_lava"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_platform_small"]
+size = Vector2(100, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goal"]
+size = Vector2(80, 120)
+
+[node name="Platform3" type="Node2D"]
+script = ExtResource("1_level")
+next_level = ""
+respawn_point = Vector2(100, 300)
+
+[node name="Background" type="ColorRect" parent="."]
+z_index = -10
+offset_right = 5000.0
+offset_bottom = 1200.0
+color = Color(0.1, 0.05, 0.1, 1)
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+z_index = 10
+position = Vector2(100, 300)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.7, 0.7)
+limit_left = 0
+limit_top = 0
+limit_right = 5000
+limit_bottom = 1200
+
+[node name="StartPlatform" type="StaticBody2D" parent="."]
+position = Vector2(100, 400)
+
+[node name="ColorRect" type="ColorRect" parent="StartPlatform"]
+offset_left = -100.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StartPlatform"]
+shape = SubResource("RectangleShape2D_platform_small")
+scale = Vector2(2, 1)
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(400, 350)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(650, 280)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(900, 350)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(1150, 450)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(1400, 550)
+
+[node name="ColorRect" type="ColorRect" parent="Platform5"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform6" type="StaticBody2D" parent="."]
+position = Vector2(1700, 450)
+
+[node name="ColorRect" type="ColorRect" parent="Platform6"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform7" type="StaticBody2D" parent="."]
+position = Vector2(2000, 350)
+
+[node name="ColorRect" type="ColorRect" parent="Platform7"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform8" type="StaticBody2D" parent="."]
+position = Vector2(2300, 250)
+
+[node name="ColorRect" type="ColorRect" parent="Platform8"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform8"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform9" type="StaticBody2D" parent="."]
+position = Vector2(2600, 350)
+
+[node name="ColorRect" type="ColorRect" parent="Platform9"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform9"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform10" type="StaticBody2D" parent="."]
+position = Vector2(2900, 450)
+
+[node name="ColorRect" type="ColorRect" parent="Platform10"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform10"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform11" type="StaticBody2D" parent="."]
+position = Vector2(3200, 550)
+
+[node name="ColorRect" type="ColorRect" parent="Platform11"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform11"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform12" type="StaticBody2D" parent="."]
+position = Vector2(3550, 450)
+
+[node name="ColorRect" type="ColorRect" parent="Platform12"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform12"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="Platform13" type="StaticBody2D" parent="."]
+position = Vector2(3900, 350)
+
+[node name="ColorRect" type="ColorRect" parent="Platform13"]
+offset_left = -50.0
+offset_top = -20.0
+offset_right = 50.0
+offset_bottom = 20.0
+color = Color(0.4, 0.15, 0.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform13"]
+shape = SubResource("RectangleShape2D_platform_small")
+
+[node name="GoalPlatform" type="StaticBody2D" parent="."]
+position = Vector2(4500, 400)
+
+[node name="ColorRect" type="ColorRect" parent="GoalPlatform"]
+offset_left = -150.0
+offset_top = -20.0
+offset_right = 150.0
+offset_bottom = 20.0
+color = Color(0.2, 0.5, 0.3, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalPlatform"]
+shape = SubResource("RectangleShape2D_platform_small")
+scale = Vector2(3, 1)
+
+[node name="Spike1" parent="." instance=ExtResource("3_spike")]
+position = Vector2(400, 328)
+groups = ["spikes"]
+
+[node name="Spike2" parent="." instance=ExtResource("3_spike")]
+position = Vector2(900, 328)
+groups = ["spikes"]
+
+[node name="Spike3" parent="." instance=ExtResource("3_spike")]
+position = Vector2(1400, 528)
+groups = ["spikes"]
+
+[node name="Spike4" parent="." instance=ExtResource("3_spike")]
+position = Vector2(1700, 428)
+groups = ["spikes"]
+
+[node name="Spike5" parent="." instance=ExtResource("3_spike")]
+position = Vector2(2300, 228)
+groups = ["spikes"]
+
+[node name="Spike6" parent="." instance=ExtResource("3_spike")]
+position = Vector2(2900, 428)
+groups = ["spikes"]
+
+[node name="Spike7" parent="." instance=ExtResource("3_spike")]
+position = Vector2(3200, 528)
+groups = ["spikes"]
+
+[node name="Spike8" parent="." instance=ExtResource("3_spike")]
+position = Vector2(3550, 428)
+groups = ["spikes"]
+
+[node name="Spike9" parent="." instance=ExtResource("3_spike")]
+position = Vector2(3900, 328)
+groups = ["spikes"]
+
+[node name="LavaFloor" parent="." instance=ExtResource("4_lava")]
+position = Vector2(2400, 1000)
+scale = Vector2(25, 3)
+groups = ["lava"]
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(4500, 340)
+collision_layer = 0
+collision_mask = 2
+
+[node name="ColorRect" type="ColorRect" parent="Goal"]
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 60.0
+color = Color(0.2, 0.8, 0.3, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+shape = SubResource("RectangleShape2D_goal")
+
+[node name="Label" type="Label" parent="Goal"]
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = 20.0
+text = "WIN!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="WinLabel" type="Label" parent="UI"]
+visible = false
+offset_left = 400.0
+offset_top = 300.0
+offset_right = 1200.0
+offset_bottom = 500.0
+theme_override_font_sizes/font_size = 72
+text = "YOU MADE IT!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]

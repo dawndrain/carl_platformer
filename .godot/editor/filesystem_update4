@@ -1,4 +1,8 @@
 res://player.gd
-res://missile.tscn
-res://enemy.gd
-res://main.gd
+res://rock.gd
+res://thrower_arena.gd
+res://garbage.tscn
+res://player.tscn
+res://garbage_pile.gd
+res://sidekick.gd
+res://tentacle_boss.gd

@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="Simple Platformer"
-run/main_scene="res://main.tscn"
+run/main_scene="res://intro.tscn"
 config/features=PackedStringArray("4.5")
+
+[autoload]
+
+MusicManager="*res://music_manager.gd"
 
 [display]
 
 window/size/viewport_width=1600
-window/size/viewport_height=1200
+window/size/viewport_height=1000
+window/stretch/mode="canvas_items"
 
 [input]
 
