@@ -32,6 +32,8 @@ func _process(_delta):
 		get_tree().change_scene_to_file("res://thrower_arena.tscn")
 	if Input.is_key_pressed(KEY_9):
 		get_tree().change_scene_to_file("res://tentacle_arena.tscn")
+	if Input.is_key_pressed(KEY_N):
+		get_tree().change_scene_to_file("res://platform3.tscn")
 
 	# Check if boss defeated
 	if get_tree() and get_tree().get_nodes_in_group("enemies").size() == 0:

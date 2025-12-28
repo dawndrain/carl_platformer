@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://platform0"]
+[gd_scene load_steps=6 format=3 uid="uid://platform0"]
 
 [ext_resource type="Script" path="res://platform_level.gd" id="1_level"]
 [ext_resource type="PackedScene" uid="uid://player123" path="res://player.tscn" id="2_player"]
+[ext_resource type="Texture2D" uid="uid://cavalier" path="res://cavalier_pixel_art.png" id="3_cavalier"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_platform"]
 size = Vector2(250, 40)
@@ -133,5 +134,11 @@ offset_bottom = 20.0
 text = "GOAL"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Cuddlepup" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(2200, 450)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_cavalier")
 
 [connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]

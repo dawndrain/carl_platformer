@@ -9,6 +9,7 @@ func _ready():
 	player.spawn_missile.connect(_on_spawn_missile)
 	player.spawn_bomb.connect(_on_player_spawn_bomb)
 	sidekick.shoot_missile.connect(_on_spawn_missile)
+	MusicManager.play_music("res://elevator_shanty_song.mp3")
 
 func _process(_delta):
 	if get_tree().get_nodes_in_group("enemies").size() == 0:

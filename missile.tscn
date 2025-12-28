@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://missile123"]
 
-[ext_resource type="Script" path="res://missile.gd" id="1_missile"]
+[ext_resource type="Script" uid="uid://c16a3syuxglfr" path="res://missile.gd" id="1_missile"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_missile"]
 size = Vector2(16, 8)

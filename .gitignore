@@ -1,1 +1,15 @@
+# Godot
 .godot/
+
+# Export presets (optional - uncomment if you don't want to share)
+# export_presets.cfg
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Video source files (converted to mp3)
+*.mp4
+
+# Import files in docs folder (generated)
+docs/*.import

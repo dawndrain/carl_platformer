@@ -11,7 +11,10 @@ func _ready():
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in enemies:
 		if enemy.global_position.distance_to(global_position) < radius:
-			enemy.take_damage(damage)
+			if enemy.has_method("take_damage"):
+				enemy.take_damage(damage)
+			else:
+				enemy.queue_free()
 
 	# Fade out and remove
 	var tween = create_tween()

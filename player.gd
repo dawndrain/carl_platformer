@@ -151,7 +151,10 @@ func stomp_land():
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in enemies:
 		if enemy.global_position.distance_to(global_position) < 200:
-			enemy.take_damage(2)
+			if enemy.has_method("take_damage"):
+				enemy.take_damage(2)
+			else:
+				enemy.queue_free()  # Just destroy enemies without take_damage
 
 func create_shockwave():
 	# Create expanding ring effect

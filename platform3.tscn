@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://platform3"]
+[gd_scene load_steps=8 format=3 uid="uid://platform3"]
 
 [ext_resource type="Script" path="res://platform_level.gd" id="1_level"]
 [ext_resource type="PackedScene" uid="uid://player123" path="res://player.tscn" id="2_player"]
 [ext_resource type="PackedScene" uid="uid://spike123" path="res://spike.tscn" id="3_spike"]
 [ext_resource type="PackedScene" uid="uid://lava123" path="res://lava.tscn" id="4_lava"]
+[ext_resource type="Texture2D" uid="uid://cavalier" path="res://cavalier_pixel_art.png" id="5_cavalier"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_platform_small"]
 size = Vector2(100, 40)
@@ -294,6 +295,12 @@ offset_bottom = 20.0
 text = "WIN!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Cuddlepup" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(4500, 350)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_cavalier")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
